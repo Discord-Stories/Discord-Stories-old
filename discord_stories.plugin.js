@@ -25,6 +25,7 @@ module.exports = class DiscordStories {
 
     getAuthor() {
         return "Pickaxe828#4395";
+    }
 
     load() { } // Optional function. Called when the plugin is loaded in to memory
 
