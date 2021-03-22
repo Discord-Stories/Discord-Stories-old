@@ -1,8 +1,8 @@
 # Discord Stories
 
-[![image](https://img.shields.io/github/issues/pickaxe828/Discord-Stories?style=flat-square)]()
-[![image](https://img.shields.io/github/forks/pickaxe828/Discord-Stories?style=flat-square)]()
-[![image](https://img.shields.io/github/license/pickaxe828/Discord-Stories?style=flat-square)]()
+[![image](https://img.shields.io/github/issues/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/)
+[![image](https://img.shields.io/github/forks/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/)
+[![image](https://img.shields.io/github/license/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/)
 
 **It's still working in progress, not suggested to use for now** 
 <br/>
