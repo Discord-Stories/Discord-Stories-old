@@ -1,5 +1,9 @@
 # Discord Stories
 
+[![image](https://img.shields.io/github/issues/pickaxe828/Discord-Stories?style=flat-square)]()
+[![image](https://img.shields.io/github/forks/pickaxe828/Discord-Stories?style=flat-square)]()
+[![image](https://img.shields.io/github/license/pickaxe828/Discord-Stories?style=flat-square)]()
+
 **It's still working in progress, not suggested to use for now** 
 <br/>
 
@@ -8,11 +12,13 @@ This is Discord Stories system, just like how Instagram stories works.
 <br/>
 
 # How to download it/ run it?
-**Make sure you've downloaded BandagedBetterDiscord from [HERE](https://rauenzi.github.io/BetterDiscordApp/)**
+**Make sure you've already downloaded BandagedBetterDiscord from [HERE](https://rauenzi.github.io/BetterDiscordApp/)**
 
-Click the button above or [HERE](https://github.com/pickaxe828/Discord-Stories/archive/refs/heads/main.zip) to download the zip file.
-
-Unzip the file, and put the `discord_stories.plugin.js` inside of `%appdata%/betterdiscord/plugins` with File Explorer.
+1. Click the button above or [HERE](https://github.com/pickaxe828/Discord-Stories/archive/refs/heads/main.zip) to download the zip file.
+2. Unzip the `.zip`
+3. Open the path `%appdata%/betterdiscord/plugins` on File Explorer.
+4. Put the `discord_stories.plugin.js` inside of the folder.
+5. If BetterDiscord client sucessfully loaded it in, a bubble box should appear.
 <br/>
 <br/>
 
@@ -22,31 +28,4 @@ Yes it's a violation of Discord ToS, but you won't get banned by Discord proacti
 <br/>
 <br/>
 
-# How does it work? (Technically)   
-## Create account ##
-Once you download this plugin and when it get started, one Discord Stories account is created on the database online. 
-<br/>
-<br/>
-
-## Fetching for new stories ##
-These things will be sent to our server:
-
-* Client name (Your name)
-* Client id (Your user id)
-* Friend list (Your friend list)
-  
-After these stuff has sent to the server, the server will see who is your friend and give the corrisponding stories through our [API]()
-<br/>
-<br/>
-
-## Create/ upload new stories ##
-These things will be sent to our server:
-
-* The context you've uploaded
-* Client id
-* Friend list (Your friend list)
-  
-After these stuff has sent to the server, the server will store down the time you sent to the server, the context, and your friend list. The  friend list will be deleted after your stories expire (After 24 hours).
-<br/>
-<br/>
 
