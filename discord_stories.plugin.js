@@ -105,13 +105,11 @@ module.exports = class DiscordStories {
                 ask_fls_perm_button.style.borderRadius = "100px/100px";
                 ask_fls_perm_button.style.backgroundColor = "#202225";
                 
-                ask_fls_perm_button_text.textContent = 
-                `Press to allow Discord Stories<br>
-                to get your friend list`
+                ask_fls_perm_button_text.textContent = `Allow Discord Stories getting your friend list`
                 ask_fls_perm_button_text.style.fontWeight = "600"
                 ask_fls_perm_button_text.style.margin = "0px";
                 ask_fls_perm_button_text.style.color = "#FFFFFF"
-                ask_fls_perm_button_text.style.fontSize = "65%"
+                ask_fls_perm_button_text.style.fontSize = "75%"
                 ask_fls_perm_button_text.style.textAlign = "center"
                 ask_fls_perm_button_text.display = "flex"
                 ask_fls_perm_button_text.style.lineHeight = "48px"
