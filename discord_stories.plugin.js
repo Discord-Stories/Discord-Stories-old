@@ -92,7 +92,7 @@ module.exports = class DiscordStories {
             stories_container.appendChild(add_button_container);
 
             if (Boolean(BdApi.loadData(plugin_name, "allowFriendListScraping"))) {
-                dummyIconGen();
+                this.dummyIconGen();
 
             }else{
                 let ask_fls_perm_button = document.createElement("div");
@@ -121,11 +121,31 @@ module.exports = class DiscordStories {
                 ask_fls_perm_button.addEventListener('click', event => {
                     BdApi.saveData(plugin_name, "allowFriendListScraping", 1);
                     ask_fls_perm_button.remove();
-                    dummyIconGen();
+                    this.dummyIconGen();
 
                 });
             }
 
+            add_button.addEventListener("click", event => {
+                let add_panel_container = document.getElementsByClassName("layerContainer-yqaFcK")[0];
+                let add_panel_bg = document.createElement("div");
+                let add_panel = document.createElement("div");
+
+                add_panel_bg.className = "backdropWithLayer-3_uhz4";
+                add_panel_bg.style = "opacity: 0.85; background-color: rgb(0, 0, 0); transform: translateZ(0px)";
+
+                add_panel.className = "focusLock-Ns3yie root-1gCeng small-3iVZYw fullscreenOnMobile-1bD22y"
+                add_panel.style = "opacity: 1; transform: scale(1)";
+
+                add_panel_bg.appendChild(add_panel);
+                add_panel_container.appendChild(add_panel_bg);
+                
+
+                add_panel_bg.addEventListener("click", event => {
+                    add_panel_bg.remove();
+
+                });
+            });            
         }
     }
     
@@ -181,14 +201,23 @@ module.exports = class DiscordStories {
 
     dummyIconGen() {
         
-
         let relationshipModule = BdApi.findModuleByProps("getRelationships");
         let relationships = relationshipModule.getRelationships();
-        let usersModule = BdApi.findModuleByProps("getUser");
+        let usersModule = BdApi.findModuleByProps("getCurrentUser");
+        let friends = [];
+        let banned_friends = [];
 
 
-        console.log(relationships);
-        console.log(usersModule.getUsers());
+        for (let i = 0; i < Object.keys(relationships).length; i++) {
+            if (relationships[Object.keys(relationships)[i]] === 1) {
+                friends.push(usersModule.getUser(Object.keys(relationships)[i]));
+            }else{
+                banned_friends.push(usersModule.getUser(Object.keys(relationships)[i]));
+            }
+        }
+
+        console.log(friends);
+        console.log(banned_friends);
     }
 
     
