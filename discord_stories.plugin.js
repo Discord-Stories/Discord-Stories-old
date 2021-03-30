@@ -1,11 +1,12 @@
 /**
  * @name DiscordStories
  * @description Discord Stories third party plug-in!
- * @version _internalTest
+ * @version _Development
  * @invite nKbSGzW6
  * @authorId 465026906450821121
- * @module DiscordStories
  */
+
+// @updateUrl https://raw.githubusercontent.com/pickaxe828/Discord-Stories/main/discord_stories.plugin.js
 
 let plugin_name = "DiscordStories";
 
@@ -78,7 +79,7 @@ module.exports = class DiscordStories {
             stories_column.appendChild(stories_container);
 
 
-            let add_button_src = document.getElementsByClassName("circleIconButton-jET_ig")[0];
+            let add_button_src = document.getElementsByClassName("circleIconButton-1QV--U")[0];
             let add_button = add_button_src.cloneNode(true);
             let add_button_container = document.createElement("div");
             add_button.style.borderRadius = "100%";
@@ -127,24 +128,39 @@ module.exports = class DiscordStories {
             }
 
             add_button.addEventListener("click", event => {
-                let add_panel_container = document.getElementsByClassName("layerContainer-yqaFcK")[0];
-                let add_panel_bg = document.createElement("div");
-                let add_panel = document.createElement("div");
 
-                add_panel_bg.className = "backdropWithLayer-3_uhz4";
-                add_panel_bg.style = "opacity: 0.85; background-color: rgb(0, 0, 0); transform: translateZ(0px)";
+                if (!document.getElementsByClassName("modal-3c3bKg")[0]) {
+                    let add_panel_container = document.getElementsByClassName("layerContainer-yqaFcK")[0];
+                    let add_panel_bg = document.createElement("div");
+                    let add_panel_wrapper = document.createElement("div");
+                    let add_panel_child = document.createElement("div");
+                    let add_panel = document.createElement("div");
 
-                add_panel.className = "focusLock-Ns3yie root-1gCeng small-3iVZYw fullscreenOnMobile-1bD22y"
-                add_panel.style = "opacity: 1; transform: scale(1)";
+                    add_panel_bg.className = "backdrop-1wrmKB";
+                    add_panel_bg.style = "opacity: 0.85; background-color: rgb(0, 0, 0); z-index: 1000; transform: translateZ(0px)";
 
-                add_panel_bg.appendChild(add_panel);
-                add_panel_container.appendChild(add_panel_bg);
+                    add_panel_wrapper.className = "modal-3c3bKg";
+                    add_panel_wrapper.style = "opacity: 1; transform: scale(1) translateZ(0px)";
+
+                        add_panel_child.className = "inner-1ilYF7";
+
+                            add_panel.className = "uploadModal-2ifh8j";
+                            add_panel.style = "min-height: 500px; width: 400px;"
+
+
+                    add_panel_child.appendChild(add_panel);
+                    add_panel_wrapper.appendChild(add_panel_child);
+                    add_panel_container.appendChild(add_panel_bg);
+                    add_panel_container.appendChild(add_panel_wrapper);
+                    
                 
 
-                add_panel_bg.addEventListener("click", event => {
-                    add_panel_bg.remove();
+                    add_panel.addEventListener("click", event => {
+                        add_panel_bg.remove();
+                        add_panel_wrapper.remove();
 
-                });
+                    });
+            }
             });            
         }
     }
