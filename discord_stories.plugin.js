@@ -48,8 +48,6 @@ module.exports = class DiscordStories {
 
         if (!document.getElementsByClassName("storiesColumn")[0]) {
 
-            
-
             let stories_column = document.createElement('div');
             let container = document.getElementsByClassName("nowPlayingColumn-2sl4cE")[0];
             stories_column = container.insertBefore(stories_column, document.getElementsByClassName("nowPlayingScroller-2XrVUt")[0]);
@@ -128,40 +126,70 @@ module.exports = class DiscordStories {
             }
 
             add_button.addEventListener("click", event => {
-
-                if (!document.getElementsByClassName("modal-3c3bKg")[0]) {
-                    let add_panel_container = document.getElementsByClassName("layerContainer-yqaFcK")[0];
-                    let add_panel_bg = document.createElement("div");
-                    let add_panel_wrapper = document.createElement("div");
-                    let add_panel_child = document.createElement("div");
-                    let add_panel = document.createElement("div");
-
-                    add_panel_bg.className = "backdrop-1wrmKB";
-                    add_panel_bg.style = "opacity: 0.85; background-color: rgb(0, 0, 0); z-index: 1000; transform: translateZ(0px)";
-
-                    add_panel_wrapper.className = "modal-3c3bKg";
-                    add_panel_wrapper.style = "opacity: 1; transform: scale(1) translateZ(0px)";
-
-                        add_panel_child.className = "inner-1ilYF7";
-
-                            add_panel.className = "uploadModal-2ifh8j";
-                            add_panel.style = "min-height: 500px; width: 400px;"
-
-
-                    add_panel_child.appendChild(add_panel);
-                    add_panel_wrapper.appendChild(add_panel_child);
-                    add_panel_container.appendChild(add_panel_bg);
-                    add_panel_container.appendChild(add_panel_wrapper);
-                    
+                this.getAddPanel();
                 
-
-                    add_panel.addEventListener("click", event => {
-                        add_panel_bg.remove();
-                        add_panel_wrapper.remove();
-
-                    });
-            }
             });            
+        }
+    }
+
+
+    getAddPanel() {
+        if (!document.getElementsByClassName("modal-3c3bKg")[0]) {
+            let _container = document.getElementsByClassName("layerContainer-yqaFcK")[0];
+            let _bg = document.createElement("div");
+            let _wrapper = document.createElement("div");
+            let _child = document.createElement("div");
+            let panel = document.createElement("div");
+
+            _bg.className = "backdrop-1wrmKB";
+            _bg.style = "opacity: 0.85; background-color: rgb(0, 0, 0); z-index: 1000; transform: translateZ(0px)";
+
+            _wrapper.className = "modal-3c3bKg";
+            _wrapper.style = "opacity: 1; transform: scale(1) translateZ(0px)";
+
+                _child.className = "inner-1ilYF7";
+
+                    panel.className = "uploadModal-2ifh8j";
+
+            let _bottom = document.createElement("div");
+            let _send_btn = document.createElement("div");
+            let _send_txt = document.createElement("div");
+            let _cancel_btn = document.createElement("div");
+            let _cancel_txt = document.createElement("div");
+
+            _bottom.className = "flex-1xMQg5 flex-1O1GKY horizontalReverse-2eTKWD horizontalReverse-3tRjY7 flex-1O1GKY directionRowReverse-m8IjIq justifyStart-2NDFzi alignStretch-DpGPf3 noWrap-3jynv6 footer-2gL1pp";
+            _send_btn.className = "button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeMedium-1AC_Sl grow-q77ONN da-grow"
+            _send_txt.className = "contents-18-Yxp"
+            _cancel_btn.className = "button-38aScr lookLink-9FtZy- colorPrimary-3b3xI6 sizeMedium-1AC_Sl grow-q77ONN"
+            _cancel_txt.className = "contents-18-Yxp";
+            
+            _send_btn.type = "submit"
+            _send_txt.textContent = "Upload"
+            _cancel_btn.type = "button"
+            _cancel_txt.textContent = "Cancel"
+            
+            this.TODO();
+
+            _send_btn.appendChild(_send_txt);
+            _cancel_btn.appendChild(_cancel_txt);
+
+
+
+            _child.appendChild(panel);
+            _wrapper.appendChild(_child);
+            _container.appendChild(_bg);
+            _container.appendChild(_wrapper);
+
+            _bottom.appendChild(_send_btn);
+            _bottom.appendChild(_cancel_btn);
+
+            panel.appendChild(_bottom);
+                    
+            _cancel_btn.addEventListener("click", event => {
+                _bg.remove();
+                _wrapper.remove();
+
+            });
         }
     }
     
@@ -221,20 +249,17 @@ module.exports = class DiscordStories {
         let relationships = relationshipModule.getRelationships();
         let usersModule = BdApi.findModuleByProps("getCurrentUser");
         let friends = [];
-        let banned_friends = [];
 
 
         for (let i = 0; i < Object.keys(relationships).length; i++) {
             if (relationships[Object.keys(relationships)[i]] === 1) {
                 friends.push(usersModule.getUser(Object.keys(relationships)[i]));
-            }else{
-                banned_friends.push(usersModule.getUser(Object.keys(relationships)[i]));
             }
         }
 
         console.log(friends);
-        console.log(banned_friends);
+
     }
 
-    
+    TODO() {}
 }
