@@ -8,7 +8,7 @@
 
 // @updateUrl https://raw.githubusercontent.com/pickaxe828/Discord-Stories/main/discord_stories.plugin.js
 
-let plugin_name = "DiscordStories";
+let plugin_name = "discord_stories";
 
 
 module.exports = class DiscordStories {
@@ -31,6 +31,18 @@ module.exports = class DiscordStories {
     load() { } // Optional function. Called when the plugin is loaded in to memory
 
     start() {
+        var link = document.createElement('link');
+
+        // set the attributes for link element
+        link.rel = 'stylesheet';
+
+        link.type = 'text/css';
+
+        link.href = 'discord_stories.theme.css';
+
+        BdApi.injectCSS(plugin_name, link)
+
+        console.log("CSS injected.");
     }
 
     stop() { } // Required function. Called when the plugin is deactivated
@@ -172,7 +184,6 @@ module.exports = class DiscordStories {
 
             _send_btn.appendChild(_send_txt);
             _cancel_btn.appendChild(_cancel_txt);
-
 
 
             _child.appendChild(panel);
