@@ -1,3 +1,4 @@
 
 *.json
-DiscordStories.config.json
+*.js
+!discord_stories.plugin.js

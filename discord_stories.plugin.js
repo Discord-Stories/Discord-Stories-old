@@ -1,6 +1,6 @@
 /**
  * @name DiscordStories
- * @description Discord Stories third party plug-in!
+ * @description Let you be able to post and see stories like how Instagram stories works
  * @version _Development
  * @invite nKbSGzW6
  * @authorId 465026906450821121
