@@ -31,18 +31,25 @@ module.exports = class DiscordStories {
     load() { } // Optional function. Called when the plugin is loaded in to memory
 
     start() {
-        var link = document.createElement('link');
+        function cssInit() {
+            var link = document.createElement('link');
+            // set the attributes for link element
+            link.rel = 'stylesheet';
+            link.href = BdApi.Plugins.folder + '\\discord_stories.theme.css';
+            link.className = "discord_stories.theme"
+            document.head.appendChild(link);
+            console.log("CSS injected.");
+        }
 
-        // set the attributes for link element
-        link.rel = 'stylesheet';
+        if (document.head.getElementsByClassName("discord_stories.theme")[0] === undefined) {
+            cssInit()
+        }else{
+            document.head.getElementsByClassName("discord_stories.theme")[0].remove();
+            cssInit();
+        }
+        
 
-        link.type = 'text/css';
-
-        link.href = 'discord_stories.theme.css';
-
-        BdApi.injectCSS(plugin_name, link)
-
-        console.log("CSS injected.");
+        setInterval()
     }
 
     stop() { } // Required function. Called when the plugin is deactivated
@@ -73,9 +80,6 @@ module.exports = class DiscordStories {
 
 
             stories_column.className = "storiesColumn";
-            stories_column.style.height = "100px";
-            stories_column.style.width = "336px";
-            stories_column.style.padding = "16px 8px 16px 16px";
 
             stories_title.className = "header-13Cw0- da-header base-1x0h_U da-base size12-3cLvbJ";
 

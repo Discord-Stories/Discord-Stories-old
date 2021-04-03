@@ -1,1 +1,5 @@
-.storiesColumn
+.storiesColumn {
+    height: 100px;
+    width: 336px;
+    padding: 16px 8px 16px 16px;
+}
