@@ -1,0 +1,37 @@
+/**
+ * @name DiscordStories
+ * @description Let you be able to post and see stories like how Instagram stories works
+ * @version _Development
+ * @invite nKbSGzW6
+ * @authorId 465026906450821121
+ * @author Pickaxe828#4395
+ */
+
+.storiesColumn {
+    height: 100px;
+    width: 336px;
+    padding: 16px 8px 16px 16px;
+}
+
+.storiesContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.addButton {
+    border-radius: 100%;
+}
+
+.addButtonContainer {
+    width: 48px;
+    vertical-align: top;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.AskPermButton {
+    width: 268px;
+    height: 48px;
+    display: inline-block;
+
+}

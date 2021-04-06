@@ -8,12 +8,12 @@
 
 // @updateUrl https://raw.githubusercontent.com/pickaxe828/Discord-Stories/main/discord_stories.plugin.js
 
-let plugin_name = "discord_stories";
+let plugin_name = "DiscordStories";
 
 
 module.exports = class DiscordStories {
     getName() {
-        return "Discord Stories";
+        return "DiscordStories";
     }
 
     getDescription() {
@@ -31,18 +31,11 @@ module.exports = class DiscordStories {
     load() { } // Optional function. Called when the plugin is loaded in to memory
 
     start() {
-        var link = document.createElement('link');
+        if (BdApi.Themes.isEnabled("DiscordStories")) {}else{
+            this.startUpFatal();
+        }
 
-        // set the attributes for link element
-        link.rel = 'stylesheet';
-
-        link.type = 'text/css';
-
-        link.href = 'discord_stories.theme.css';
-
-        BdApi.injectCSS(plugin_name, link)
-
-        console.log("CSS injected.");
+        setInterval()
     }
 
     stop() { } // Required function. Called when the plugin is deactivated
@@ -73,16 +66,10 @@ module.exports = class DiscordStories {
 
 
             stories_column.className = "storiesColumn";
-            stories_column.style.height = "100px";
-            stories_column.style.width = "336px";
-            stories_column.style.padding = "16px 8px 16px 16px";
 
-            stories_title.className = "header-13Cw0- da-header base-1x0h_U da-base size12-3cLvbJ";
+            stories_title.className = "storiesTitle header-13Cw0- da-header base-1x0h_U da-base size12-3cLvbJ";
 
-            //393C43
-            stories_container.className = "storiesContainer parent";
-            stories_container.style.height = "100%";
-            stories_container.style.width = "100%";
+            stories_container.className = "storiesContainer";
 
             stories_title.appendChild(title);
             stories_column.appendChild(stories_title);
@@ -92,12 +79,9 @@ module.exports = class DiscordStories {
             let add_button_src = document.getElementsByClassName("circleIconButton-1QV--U")[0];
             let add_button = add_button_src.cloneNode(true);
             let add_button_container = document.createElement("div");
-            add_button.style.borderRadius = "100%";
-            add_button_container.className = "child";
-            add_button_container.style.verticalAlign = "top";
-            add_button_container.style.display = "inline-block";
-            add_button_container.style.width = "48px";
-            add_button_container.style.padding = "0px 10px 0px 0px";
+
+            add_button_container.classList.add("addButtonChild");
+            add_button.classList.add("addButton");
 
             add_button_container.appendChild(add_button);
             stories_container.appendChild(add_button_container);
@@ -109,7 +93,7 @@ module.exports = class DiscordStories {
                 let ask_fls_perm_button = document.createElement("div");
                 let ask_fls_perm_button_text = document.createElement("p");
 
-                ask_fls_perm_button.className = "child";
+                ask_fls_perm_button.className = "AskPermButton";
                 ask_fls_perm_button.style.display = "inline-block";
                 ask_fls_perm_button.style.width = "268px";
                 ask_fls_perm_button.style.height = "48px";
@@ -270,6 +254,23 @@ module.exports = class DiscordStories {
 
         console.log(friends);
 
+    }
+
+    startUpFatal() {
+        BdApi.showConfirmationModal("Discord Stories",
+            [
+                "Theme need to be loaded first! Download it ",
+                BdApi.React.createElement("a", { href: "https://google.com", target: "_blank" }, "here")
+            ],
+            {
+                confirmText: "Okay",
+                cancelText: false
+            }
+        ).then(
+            setTimeout(() => { BdApi.Plugins.disable(plugin_name); }, 100));
+
+        
+        
     }
 
     TODO() {}
