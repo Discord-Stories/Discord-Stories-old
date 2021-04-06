@@ -1,4 +1,6 @@
-
-*.json
-*.js
+*
+!README.md
 !discord_stories.plugin.js
+
+!plugins/*
+!themes/*
