@@ -29,9 +29,28 @@
     padding-right: 10px;
 }
 
-.AskPermButton {
+.askPermButton {
     width: 268px;
     height: 48px;
     display: inline-block;
 
+}
+
+.storiesIconContainer {
+    height: 48px;
+    width: 48px;
+    vertical-align: top;
+    display: inline-block;
+    padding-right: 10px;
+    
+}
+
+.storiesIcon {
+    
+    height: 48px;
+    width: 48px;
+    background-color: #F80;
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 100%;
 }

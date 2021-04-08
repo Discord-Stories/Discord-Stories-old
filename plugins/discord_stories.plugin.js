@@ -31,11 +31,12 @@ module.exports = class DiscordStories {
     load() { } // Optional function. Called when the plugin is loaded in to memory
 
     start() {
-        if (BdApi.Themes.isEnabled("DiscordStories")) {}else{
-            this.startUpFatal();
-        }
-
-        setInterval()
+        setTimeout(() => {
+            if (BdApi.Themes.isEnabled("DiscordStories")) { } else {
+                this.startUpFatal();
+            }
+        }, 100);
+        
     }
 
     stop() { } // Required function. Called when the plugin is deactivated
@@ -80,7 +81,7 @@ module.exports = class DiscordStories {
             let add_button = add_button_src.cloneNode(true);
             let add_button_container = document.createElement("div");
 
-            add_button_container.classList.add("addButtonChild");
+            add_button_container.classList.add("addButtonContainer");
             add_button.classList.add("addButton");
 
             add_button_container.appendChild(add_button);
@@ -93,7 +94,7 @@ module.exports = class DiscordStories {
                 let ask_fls_perm_button = document.createElement("div");
                 let ask_fls_perm_button_text = document.createElement("p");
 
-                ask_fls_perm_button.className = "AskPermButton";
+                ask_fls_perm_button.className = "askPermButton";
                 ask_fls_perm_button.style.display = "inline-block";
                 ask_fls_perm_button.style.width = "268px";
                 ask_fls_perm_button.style.height = "48px";
@@ -254,6 +255,17 @@ module.exports = class DiscordStories {
 
         console.log(friends);
 
+        let stories_icon = document.createElement("div");
+        let stories_icon_inner = document.createElement("div");
+        let stories_container = document.getElementsByClassName("storiesContainer")[0];
+        stories_icon.classList.add("storiesIconContainer");
+        stories_icon_inner.classList.add("storiesIcon");
+
+        this.TODO();
+        stories_icon.appendChild(stories_icon_inner);
+        for (i = 0; i < 5; i++) { stories_container.appendChild(stories_icon); }
+        
+
     }
 
     startUpFatal() {
@@ -267,7 +279,7 @@ module.exports = class DiscordStories {
                 cancelText: false
             }
         ).then(
-            setTimeout(() => { BdApi.Plugins.disable(plugin_name); }, 100));
+            BdApi.Plugins.disable(plugin_name));
 
         
         
