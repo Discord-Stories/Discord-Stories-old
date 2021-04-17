@@ -255,15 +255,17 @@ module.exports = class DiscordStories {
 
         console.log(friends);
 
-        let stories_icon = document.createElement("div");
-        let stories_icon_inner = document.createElement("div");
-        let stories_container = document.getElementsByClassName("storiesContainer")[0];
-        stories_icon.classList.add("storiesIconContainer");
-        stories_icon_inner.classList.add("storiesIcon");
-
         this.TODO();
-        stories_icon.appendChild(stories_icon_inner);
-        for (i = 0; i < 5; i++) { stories_container.appendChild(stories_icon); }
+        
+        for (let i = 0; i < 5; i++) { 
+            let stories_icon = document.createElement("div");
+            let stories_icon_inner = document.createElement("div");
+            let stories_container = document.getElementsByClassName("storiesContainer")[0];
+            stories_icon.classList.add("storiesIconContainer");
+            stories_icon_inner.classList.add("storiesIcon");
+            stories_icon.appendChild(stories_icon_inner);
+            stories_container.appendChild(stories_icon); 
+        }
         
 
     }
