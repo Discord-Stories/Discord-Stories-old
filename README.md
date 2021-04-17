@@ -11,6 +11,11 @@ This is Discord Stories system, just like how Instagram stories works.
 <br/>
 <br/>
 
+# Current progress
+Last update to this photo: 18/4/2020
+<br/>
+<img src="https://github.com/pickaxe828/img/blob/85eb9c4c300c7098213b6caa83c7b8f9184f69ec/discord-stories-wip.jpg?raw=true" width="30%" height="30%">
+
 # How to download it/ run it?
 **Make sure you've already downloaded BandagedBetterDiscord from [HERE](https://rauenzi.github.io/BetterDiscordApp/)**
 
@@ -24,6 +29,7 @@ This is Discord Stories system, just like how Instagram stories works.
 
 # Will this violate/ against Discord ToS?
 Yes it's a violation of Discord ToS, but you won't get banned by Discord proactively because using BetterDiscord/ Discord Stories.
+<br/>
 [Here for more detail](https://www.reddit.com/r/discordapp/comments/9mtdxr/why_is_betterdiscord_against_the_tos/e7hap1q)
 <br/>
 <br/>
