@@ -254,17 +254,21 @@ module.exports = class DiscordStories {
         }
 
         console.log(friends);
-
-        this.TODO();
         
         for (let i = 0; i < 5; i++) { 
+            let stories_photo = document.createElement("div");
+            let stories_circle = document.createElement("div");
             let stories_icon = document.createElement("div");
-            let stories_icon_inner = document.createElement("div");
+            let stories_icon_wrapper = document.createElement("div");
             let stories_container = document.getElementsByClassName("storiesContainer")[0];
-            stories_icon.classList.add("storiesIconContainer");
-            stories_icon_inner.classList.add("storiesIcon");
-            stories_icon.appendChild(stories_icon_inner);
-            stories_container.appendChild(stories_icon); 
+
+            stories_icon_wrapper.classList.add("storiesIconWrapper");
+            stories_circle.classList.add("storiesIconCircle");
+            stories_icon.classList.add("storiesIcon");
+            
+            stories_icon_wrapper.appendChild(stories_circle);
+            stories_icon_wrapper.appendChild(stories_icon);
+            stories_container.appendChild(stories_icon_wrapper); 
         }
         
 

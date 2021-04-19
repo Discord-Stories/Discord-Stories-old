@@ -36,21 +36,33 @@
 
 }
 
-.storiesIconContainer {
+.storiesIconWrapper {
     height: 48px;
     width: 48px;
     vertical-align: top;
     display: inline-block;
     padding-right: 8px;
+    position: relative
     
 }
 
-.storiesIcon {
-    
+.storiesIconCircle {
     height: 48px;
     width: 48px;
-    background-color: #F80;
     vertical-align: top;
     display: inline-block;
     border-radius: 100%;
+    background: #43B581;
+    position: absolute;
+}
+
+.storiesIcon {
+    height: 44px;
+    width: 44px;
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 100%;
+    background: #FFFFFF;
+    position: absolute;
+
 }
