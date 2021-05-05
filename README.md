@@ -12,7 +12,7 @@ This is Discord Stories system, just like how Instagram stories works.
 <br/>
 
 # Current progress
-Last update to this photo: 18/4/2020
+Last update to this photo: 20/4/2021
 <br/>
 <img src="https://raw.githubusercontent.com/pickaxe828/img/e81bc82bf1d8e08907ba4fc60cbcf087ff745bc0/discord-stories-wip-2.PNG" width="30%" height="30%">
 
