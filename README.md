@@ -12,9 +12,9 @@ This is Discord Stories system, just like how Instagram stories works.
 <br/>
 
 # Current progress
-Last update to this photo: 18/4/2020
+Last update to this photo: 20/4/2021
 <br/>
-<img src="https://github.com/pickaxe828/img/blob/85eb9c4c300c7098213b6caa83c7b8f9184f69ec/discord-stories-wip.jpg?raw=true" width="30%" height="30%">
+<img src="https://raw.githubusercontent.com/pickaxe828/img/e81bc82bf1d8e08907ba4fc60cbcf087ff745bc0/discord-stories-wip-2.PNG" width="30%" height="30%">
 
 # How to download it/ run it?
 **Make sure you've already downloaded BandagedBetterDiscord from [HERE](https://rauenzi.github.io/BetterDiscordApp/)**
