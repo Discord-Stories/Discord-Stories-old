@@ -267,7 +267,7 @@ module.exports = class DiscordStories {
             stories_icon.classList.add("storiesIcon");
             
             stories_icon_wrapper.appendChild(stories_circle);
-            stories_icon_wrapper.appendChild(stories_icon);
+            stories_circle.appendChild(stories_icon);
             stories_container.appendChild(stories_icon_wrapper); 
         }
         

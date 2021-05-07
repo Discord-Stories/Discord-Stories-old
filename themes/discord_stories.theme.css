@@ -59,10 +59,13 @@
 .storiesIcon {
     height: 44px;
     width: 44px;
-    vertical-align: top;
-    display: inline-block;
     border-radius: 100%;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 2px;
+    background-clip: content-box;
 
 }
