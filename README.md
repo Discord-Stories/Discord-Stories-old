@@ -4,7 +4,9 @@
 [![image](https://img.shields.io/github/forks/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/network/members)
 [![image](https://img.shields.io/github/license/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories)
 
-**It's still working in progress, not suggested to use for now** 
+**It's still working in progress, not suggested to use for now, some testers has reported that this plugin affects the performance of their discord client, some optimizations should be done before 1.0** 
+<br/>
+**Also, this plugin haven't been posted on the BetterDiscordLibrary/ BetterDiscord Discord server #plugin-releases channel, which means it's not checked/ approved by BetterDiscord yet**
 <br/>
 
 This is Discord Stories system, just like how Instagram stories works.
