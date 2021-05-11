@@ -23,7 +23,8 @@
 }
 
 .addButtonContainer {
-    width: 48px;
+    height: var(--storiesContainerSize);
+    width: var(--storiesContainerSize);
     vertical-align: top;
     display: inline-block;
     padding-right: 8px;
@@ -39,33 +40,43 @@
 .storiesIconWrapper {
     height: 48px;
     width: 48px;
+    margin-right: 8px;
+    border-radius: 100%;
     vertical-align: top;
     display: inline-block;
-    padding-right: 8px;
-    position: relative
-    
+    position: relative;
+    background-color: #43B581;
+    background-clip: content-box;
 }
 
 .storiesIconCircle {
-    height: 48px;
-    width: 48px;
+    height: var(--storiesIconSize);
+    width: var(--storiesIconSize);
+    border-radius: 100%;
+    border: var(--storiesIconBorder) var(--background-secondary) solid;
+    margin: var(--storiesIconMargin);
     vertical-align: top;
     display: inline-block;
-    border-radius: 100%;
-    background: #43B581;
+    background-color: #FFFFFF00;
     position: absolute;
+    background-clip: content-box;
 }
 
 .storiesIcon {
-    height: 44px;
-    width: 44px;
+    height: var(--storiesIconSize);
+    width: var(--storiesIconSize);
     border-radius: 100%;
     background-color: #FFFFFF;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    display: block;
-    padding: 2px;
     background-clip: content-box;
+}
 
+.theme-dark, .theme-light {
+    --storiesContainerSize: 52px;
+    --storiesIconSize: 42px;
+    --storiesIconBorder: 2px;
+    --storiesIconMargin: 3px;
+    --storiesIconPadding: calc(var(--storiesIconBorder) + var(--storiesIconMargin));
 }
