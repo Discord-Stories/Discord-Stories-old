@@ -1,4 +1,4 @@
-# Discord-Stories
+# Discord Stories
 
 [![image](https://img.shields.io/github/issues/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/issues)
 [![image](https://img.shields.io/github/forks/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/network/members)
@@ -15,7 +15,7 @@ This is Discord Stories system, just like how Instagram stories works.
 <br/>
 <br/>
 
-## Current-progress
+## Current progress
 Last update to this photo: 20/4/2021
 <br/>
 <img src="https://raw.githubusercontent.com/pickaxe828/img/e81bc82bf1d8e08907ba4fc60cbcf087ff745bc0/discord-stories-wip-2.PNG" width="30%" height="30%">
@@ -31,7 +31,7 @@ Last update to this photo: 20/4/2021
 <br/>
 <br/>
 
-## Known-issues
+## Known issues
 - [ ] 🟥 Plugin makes the BetterDiscord client not starting (performance) <br/>
 - [ ] 🟥 UI glitches (UI)
 
