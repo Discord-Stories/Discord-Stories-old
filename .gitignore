@@ -1,4 +1,8 @@
 *
 
-!plugins/DiscordStories.plugin.js
-!themes/DiscordStories.theme.css
+!plugins/
+!themes/
+
+!DiscordStories.plugin.js
+!discord_stories.theme.css
+
