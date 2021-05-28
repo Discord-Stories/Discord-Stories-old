@@ -36,6 +36,7 @@ _**Currently under overhaul, the commits in this branch is deprecated. More deta
 <br/>
 
 ## Known issues
+- [ ] 🟥 **Overhaul**
 - [ ] 🟥 Plugin makes the BetterDiscord client not starting (performance) <br/>
 - [ ] 🟥 UI glitches (UI)
 
