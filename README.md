@@ -1,6 +1,7 @@
 # Discord Stories
 
-![image](https://img.shields.io/static/v1?style=flat-square&label&message=UNDER_REBUILD_CURRENTLY&color=FF0000)
+![image](https://img.shields.io/static/v1?style=flat-square&label&message=UNDER_OVERHAUL_CURRENTLY&color=FF0000)
+![image](https://img.shields.io/static/v1?style=flat-square&label&message=DEPRECATED&color=FF0000)
 [![image](https://img.shields.io/github/issues/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/issues)
 [![image](https://img.shields.io/github/forks/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/network/members)
 [![image](https://img.shields.io/github/license/pickaxe828/Discord-Stories?style=flat-square)](https://github.com/pickaxe828/Discord-Stories/blob/main/LICENSE)
