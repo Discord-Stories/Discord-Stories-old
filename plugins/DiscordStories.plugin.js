@@ -174,6 +174,7 @@ module.exports = class DiscordStories {
             let stories_icon_wrapper = document.createElement("div");
             let stories_container = document.getElementsByClassName("storiesContainer")[0];
 
+<<<<<<< Updated upstream
             stories_icon_wrapper.classList.add("storiesIconWrapper");
             stories_circle.classList.add("storiesIconCircle");
             stories_icon.classList.add("storiesIcon");
@@ -296,6 +297,18 @@ module.exports = class DiscordStories {
         
         
         }   // Optional function. Observer for the `document`. Better documentation than I can provide is found here: <https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver>
+=======
+    updater() {
+        const fs = require("fs");
+        //%appdata%\betterdiscord\plugins
+        console.log("test")
+        let request = new XMLHttpRequest(); // request object
+        request.open("get", "https://api.github.com/repos/pickaxe828/Discord-Stories/contents/plugins/DiscordStories.plugin.js"); // build the request, specify method, note that Github repository content api is case-sensitive
+        request.send(); // send the request
+        request.getResponseHeader("Content-Type"); // check the response content type if you want
+        let json = JSON.parse(request.responseText); // because the response is json to need to parse it
+        console.log(json["sha"])
+>>>>>>> Stashed changes
     }
 
 }
