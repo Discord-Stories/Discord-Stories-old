@@ -1,0 +1,8 @@
+{
+    "name": "Discord Stories",
+    "version": "0.0.0",
+    "license": "MIT",
+    "author": "Pickaxe828#4395",
+    "description": "Discord stories, just like how Instagram stories works, but on discord.",
+    "appMode": "both"
+}
